@@ -1,0 +1,52 @@
+
+.container {
+	width: 940px;
+	height: 474px;
+	background: #fff url(../images/whitepreloader.gif) no-repeat;
+	background-position: 470px 237px
+
+}
+
+.ft-prev, .ft-next {  color: #fff; text-decoration:none; }
+.ft-prev a, .ft-next a { color: #fff; text-decoration:none; }
+.ft-prev a:hover, .ft-next a:hover { color: #fff; text-decoration:none;}
+
+#ft-prev-slideshowHolder, #ft-next-slideshowHolder {text-decoration:none; font-size:12px;}
+
+#ft-prev-slideshowHolder {
+	background-image:url(../images/slider/previous.png); 
+	background-position:0 0;
+	background-repeat:no-repeat;
+	width:22px;height:22px;
+	text-indent:-9000px;
+	}
+	
+#ft-next-slideshowHolder {
+	background-image:url(../images/slider/next.png); 
+	background-position:0 0;
+	background-repeat:no-repeat;
+	width:22px;height:22px;
+	text-indent:-9000px;
+	}
+	
+.ft-button-slideshowHolder {
+	width:12px;
+	height:12px;
+	background-image:url(../images/slider/pagination.png);
+	background-position:0 0;
+	background-repeat:no-repeat;
+	text-indent:-9000px;
+}
+
+#ft-buttons-slideshowHolder {
+	display:none;
+}
+
+.ft-title {
+	display:none;
+}
+
+#ft-title-slideshowHolder {
+	display:none;
+}
+	

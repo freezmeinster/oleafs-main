@@ -71,7 +71,7 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT,'assets')
+    os.path.join(PROJECT_ROOT,'templates'),
 )
 
 # List of finder classes that know how to find static files in
@@ -122,9 +122,12 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
+    'django.contrib.staticfiles',
     'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
+    'landing',
+    'livesettings',
+    'keyedcache',
+    'sites',
 )
 
 LOGIN_URL = ''
