@@ -1,3 +1,6 @@
+import os,sys
+
+sys.path.insert(0,os.path.abspath(os.path.dirname(__file__)))
 """
 WSGI config for invent project.
 
@@ -13,7 +16,6 @@ middleware here, or combine a Django application with an application of another
 framework.
 
 """
-import os
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings")
 
