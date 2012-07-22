@@ -6,7 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', 'landing.views.home', name='home'),
-    # url(r'^oleafs/', include('oleafs.foo.urls')),
+    url(r'^landing/', include('landing.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^settings/', include('livesettings.urls')),

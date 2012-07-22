@@ -16,7 +16,6 @@ MYAPP_GROUP = ConfigurationGroup(
     ordering=0             # ordering: order of group in the list (default is 1)
     )
 
-# Another example of allowing the user to select from several values
 config_register(StringValue(
         MYAPP_GROUP,
         'THEME',

@@ -1,0 +1,51 @@
+{% extends 'fullmoon/skeletons/base/fullwidth.html'%}
+
+{% block content_left %}
+    <div class="hr_line"></div>
+    <div class="intro">
+      <h2>Our portfolio</h2>
+       <p>During the rest of that day there was no other adventure to mar the peace of their journey. Once, indeed, the Tin Woodman stepped upon a beetle that was crawling along the road, and killed the poor little thing. This made the Tin Woodman very unhappy, for he was always careful not to hurt any living creature; and as he walked along he wept several tears of sorrow and regret. These tears ran slowly down his face and over the hinges of his jaw, and there they rusted.</p>
+    </div>
+    <div class="hr_line"></div>
+    <div id="content-full">
+    {% for porto in porto_list %}
+     <div class="portfolio-full-page"> 
+          <div class="portfolio-list-image"><a href="#"><img src="/media/{{ porto.main_picture}}" alt="Project title" /></a></div>
+          <div class="portfolio-list-text">
+            <h2>{{ porto.title }}</h2>
+            <p>{{ porto.description}}</p>
+            <div class="portfolio-list-thumbs">
+                <!--{% for thumb in porto.other_media.all %}
+                <a class="project-list-thumb" href="#">
+                    <img alt="image" src="/static/fullmoon/assets/images/portoflio/portfolio list/thumb-01.jpg" />
+                </a>
+                {% endfor %}-->
+            </div>
+            <div class="hr"> </div>
+            {% if porto.website %}
+           <a class="view-project" href="{{ porto.website }}">Project website</a>
+           {% endif %}
+          </div>
+      </div>
+      <div class="hr"></div>
+      {% endfor %}
+     
+    
+    <div class="pagination">
+    <span class="step-links">
+        {% if porto_list.has_previous %}
+            <a href="?page={{ porto_list.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ porto_list.number }} of {{ porto_list.paginator.num_pages }}.
+        </span>
+
+        {% if porto_list.has_next %}
+            <a href="?page={{ .next_page_number }}">next</a>
+        {% endif %}
+    </span>
+    </div>
+    <br/>
+  </div>
+{% endblock %}

@@ -1,0 +1,38 @@
+<script type='text/javascript'>
+  $(function() {
+    
+    function mainmenu(){
+        $(" #nav ul ").css({display: "none"}); // Opera Fix
+        $(" #nav li").hover(function(){
+        $(this).find('ul:first').css({visibility: "visible",display: "none"}).show(200);
+        },function(){
+        $(this).find('ul:first').css({visibility: "hidden"});
+    });
+    }
+
+    $(document).ready(function(){
+        mainmenu();
+    });
+  });
+</script>
+
+<ul id="nav">
+      <li><a href="{% url static_page 'beranda' %}">Home</a></li>
+      <li><a href="#">Layanan</a>
+      <ul>
+        <li><a href="{% url static_page 'layanan-jasa' %}">Jasa</a></li>
+        <li><a href="{% url static_page 'layanan-pelatihan' %}">Pelatihan</a></li>
+      </ul>
+      </li>
+      <li><a href="{% url porto_list %}">Portofolio</a></li>
+      <li><a href="{% url static_page 'produk' %}">Produk</a></li>
+      <li><a href="{% url static_page 'klien' %}">Klien</a></li>
+      <li><a href="#">Tentang Kami</a>
+      <ul>
+          <li><a href="{% url static_page 'tentang-oleafs' %}">Oleafs</a></li>
+          <li><a href="{% url static_page 'tentang-rekan-kerja' %}">Rekan Kerja</a></li>
+          <li><a href="{% url static_page 'tentang-teknologi' %}">Teknologi</a></li>
+      </ul>
+      </li>
+      <li><a href="{% url static_page 'kontak' %}">Kontak</a></li>
+</ul>
