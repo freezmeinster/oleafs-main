@@ -3,14 +3,17 @@
 {% block content_left %}
     <div class="hr_line"></div>
     <div class="intro">
-      <h2>Our portfolio</h2>
-       <p>During the rest of that day there was no other adventure to mar the peace of their journey. Once, indeed, the Tin Woodman stepped upon a beetle that was crawling along the road, and killed the poor little thing. This made the Tin Woodman very unhappy, for he was always careful not to hurt any living creature; and as he walked along he wept several tears of sorrow and regret. These tears ran slowly down his face and over the hinges of his jaw, and there they rusted.</p>
+      <h2>Portofolio Kami</h2>
+       <p>
+        Dengan berbagai keahlian yang tim kami kuasai, berbagai proyek teknologi informasi telah kami kerjakan.
+        Berikut ini adalah Proyek-proyek dari berbagai bidang yang telah kami kerjakan 
+       </p>
     </div>
     <div class="hr_line"></div>
     <div id="content-full">
     {% for porto in porto_list %}
      <div class="portfolio-full-page"> 
-          <div class="portfolio-list-image"><a href="#"><img src="/media/{{ porto.main_picture}}" alt="Project title" /></a></div>
+          <div class="portfolio-list-image"><img src="/media/{{ porto.main_picture}}" alt="Project title" /></div>
           <div class="portfolio-list-text">
             <h2>{{ porto.title }}</h2>
             <p>{{ porto.description}}</p>
@@ -23,7 +26,7 @@
             </div>
             <div class="hr"> </div>
             {% if porto.website %}
-           <a class="view-project" href="{{ porto.website }}">Project website</a>
+           <a class="view-project" href="{{ porto.website }}" terget="blank">Website Proyek</a>
            {% endif %}
           </div>
       </div>

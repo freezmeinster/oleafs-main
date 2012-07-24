@@ -5,6 +5,11 @@ from livesettings import config_value
 from landing.models import StaticPage,Porto
 import config
 
+def custom_404(request):
+    theme = config_value('landing','THEME')
+    return render_to_response(theme+'/skeletons/404.html',{
+    },context_instance=RequestContext(request))
+
 def home(request):
     theme = config_value('landing','THEME')
     return render_to_response(theme+'/skeletons/home.html')
